@@ -8,25 +8,67 @@
         <div class="row" class="question-bckgrnd-clr">
             <h1>Have Any Questions?</h1>
         </div>
-        <div class="row" class="input-bckgrnd-clr">
+        <div class="row" class="input-bckgrnd-clr ">
 
-            
-
-            <mat-form-field appearance="outline" data-netlify="true" name="name">
-                <mat-label >Name</mat-label>
-                <input matInput>
-            </mat-form-field>
+            <!-- <form name="contact" method="POST" data-netlify="true">
+                <p>
+                  <label>Your Name: <input type="text" name="name" /></label>   
+                </p>
+                <p>
+                  <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                  <label>Your Role: <select name="role[]" multiple>
+                    <option value="leader">Leader</option>
+                    <option value="follower">Follower</option>
+                  </select></label>
+                </p>
+                <p>
+                  <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form> -->
               
-            <br>
-          
-            <mat-form-field appearance="outline"class="size" data-netlify="true" name="message">
-                <mat-label>Message</mat-label>
-                <textarea matInput class="size"></textarea>
-            </mat-form-field>
+            
+                <!-- <mat-form-field appearance="outline" data-netlify="true" name="name">
+                    <mat-label >Name</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                
+                <br>
+            
+                <mat-form-field appearance="outline"class="size" data-netlify="true" name="message">
+                    <mat-label>Message</mat-label>
+                    <textarea matInput class="size"></textarea>
+                </mat-form-field>
 
 
-            <input type="submit" name="" value="Send Message" class="cta">
+                <input type="submit" name="" value="Send Message" class="cta"> -->
 
+                <form [formGroup]="form" data-netlify="true">
+
+                    <div>
+                        <!-- <label for="name">
+                          Name
+                        </label> -->
+
+                        <input name="name" id="name" type="text" class="size" formControlName="name" placeholder="Write your name">
+                    </div>
+                    <br>
+                    <div>
+                        <!-- <label for="address">
+                            Message
+                        </label> -->
+
+                        <!-- <input id="address" type="text" formControlName="address" rows="6" cols="25" placeholder="This is the default text"> -->
+                        <textarea name="message" rows="5" cols="50" placeholder="Write a message"></textarea>
+                    </div>
+                    <br>
+                    <button class="button" type="submit">Submit</button>
+                  
+                </form>
         </div>
         
 

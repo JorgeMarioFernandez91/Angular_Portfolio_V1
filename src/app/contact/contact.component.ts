@@ -16,6 +16,8 @@ export class ContactComponent implements OnInit {
     submitted = false;
     success = false;
 
+    form;
+
     /// adding items to arguments is called 'dependency injection'
     constructor(private formBuilder: FormBuilder) {
         this.messageForm = this.formBuilder.group({
@@ -36,5 +38,6 @@ export class ContactComponent implements OnInit {
 
     ngOnInit(): void {
     }
+
 
 }
