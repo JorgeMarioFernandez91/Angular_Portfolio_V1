@@ -14,6 +14,9 @@ import {
         MatInputModule,
        } from '@angular/material/input';  ///new
 
+import { MessageService } from '../app/message.service';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,6 +49,7 @@ import { Project3Component } from './project3/project3.component';
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
+    FormsModule,
 
     BrowserAnimationsModule, 
   ],
@@ -57,7 +61,7 @@ import { Project3Component } from './project3/project3.component';
   // declarations: [
   //   SearchComponent,
   // ],
-  providers: [],
+  providers: [MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
